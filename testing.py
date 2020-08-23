@@ -7,8 +7,8 @@ def main():
     print('Table Check passed!')
     louis.checkTable([b'./en-ueb-g2.ctb'])
     # something = input('type something: ')
-    something = sys.stdin.readline().strip()
-    print("Here's what you typed: " + something)
+    something = sys.stdin.readlines()
+    # print("Here's what you typed: " + something)
     # prints the value of something and combines the ucBrl (64) and noUndefined (128) modes. Outputs as a single word, so a list is necessary to grab individual characters
     print("Translation in characters:")
     braille = louis.translateString([b'./en-ueb-g2.ctb'],something,mode=192)
